@@ -8,7 +8,8 @@
 }
 
 header > .container {
-    display: flex;
+    // display: flex;
+    @include flexbox($justify: flex-start, $wrap: nowrap);
 }
 
 .logo {
@@ -38,13 +39,15 @@ header > .container {
 }
 
 .header-navigation {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
+    @include flexbox($wrap: nowrap, $align: center);
 }
 
 .header-items {
-    display: flex;
+    // display: flex;
     gap: 50px;
+    @include flexbox($align: stretch, $wrap: nowrap);
 }
 
 .header-item {
@@ -110,8 +113,18 @@ header > .container {
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.roster-link:hover, .roster-link:focus, .roster-link:hover::after, .roster-link:focus::after {
-    opacity: 1;
+// .roster-link:hover,
+// .roster-link:focus, .roster-link:hover::after, .roster-link:focus::after {
+//     opacity: 1;
+//     outline: none;
+//     color: $accent-color;
+//     .roster-img{
+//         fill: $accent-color;
+//     }
+// }
+
+.roster-link:hover,
+.roster-link:focus {
     outline: none;
     color: $accent-color;
     .roster-img{

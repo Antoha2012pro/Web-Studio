@@ -4,6 +4,11 @@
     padding-bottom: 60px;
 }
 
+.footer > .container {
+    // display: flex;
+    @include flexbox($justify: baseline, $align: stretch);
+}
+
 .logo-footer1 {
     color: $accent-color;
     font-family: Raleway;
@@ -24,10 +29,6 @@
 
 .footer-logo:focus {
     outline: none;
-}
-
-.footer > .container {
-    display: flex;
 }
 
 .footer-address {
@@ -84,8 +85,9 @@
 }
 
 .footer-element-link {
-    display: flex;
-    align-items: center;
+    // display: flex;
+    // align-items: center;
+    @include flexbox();
     padding: 12px 12px 12px 12px;
     background-color: $footer-border-color;
     border-radius: 50%;
@@ -139,9 +141,10 @@
 }
 
 .mailing-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    @include flexbox();
     width: 200px;
     height: 50px;
     color: $title-color;

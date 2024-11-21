@@ -5,9 +5,10 @@
     top: 0;
     bottom: 0;
     background-color: rgba(88, 88, 88, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    @include flexbox();
     opacity: 1;
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -113,9 +114,10 @@
 }
 
 .modal-chek-label {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    @include flexbox();
 }
 
 .modal-chekbox {
@@ -169,9 +171,10 @@
 }
 
 .modal-close-btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    @include flexbox();
     position: absolute;
     right: 8px;
     top: 8px;

@@ -59,9 +59,10 @@
 }
 
 .team-list {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    // display: flex;
+    // justify-content: center;
+    // align-items: center;
+    @include flexbox();
     gap: 10px;
 }
 
