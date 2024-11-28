@@ -1,6 +1,12 @@
 .header{
-    padding-top: 24px;
-    padding-bottom: 25px;
+    padding: 16px 0px;
+
+    @media screen and (min-width: 768px) {
+        padding: 26px 0px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding: 24px 0px 25px 0px;
+    }
 
     & > .container {
         // display: flex;
@@ -14,28 +20,33 @@
     &__navigation {
         // display: flex;
         // align-items: center;
-        @include flexbox($wrap: nowrap, $align: center);
+        @include flexbox($wrap: nowrap, $align: center, $justify: space-between);
     }
 
     &__logo {
         margin-right: 93px;
+        font-family: Raleway;
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 1.38;
+        letter-spacing: 0.72px;
+
+
+        @media screen and (min-width: 768px) {
+            margin: 0px 88px 0px 0px;
+        }
+        @media screen and (min-width: 1200px) {
+            font-size: 26px;
+            letter-spacing: 0.78px;
+            margin: 0px 93px 0px 0px;
+        }
 
         &__web {
             color: $accent-color;
-            font-family: Raleway;
-            font-size: 26px;
-            font-weight: 700;
-            line-height: 1.38;
-            letter-spacing: 0.78px;
         }
 
         &__studio {
             color: $logo-color;
-            font-family: Raleway;
-            font-size: 26px;
-            font-weight: 700;
-            line-height: 1.38;
-            letter-spacing: 0.78px;
         }
 
         &:focus {
@@ -43,8 +54,15 @@
         }
     }
 
+    &__list {
+        display: none;
+
+        @media screen and (min-width: 768px) {
+            display: flex;
+            }
+        }
+
     &__items {
-        // display: flex;
         gap: 50px;
         @include flexbox($align: stretch, $wrap: nowrap);
     }
@@ -99,14 +117,26 @@
                 opacity: 1;
             }
         }
-    }    
+    }
 }
 
 .roster {
     display: flex;
     align-items: center;
-    gap: 50px;
-    margin-left: 318px;
+    display: none;
+
+    @media screen and (min-width: 768px) {
+        flex-direction: column;
+        gap: 10px;
+        margin-left: 96px;
+        display: flex;
+    }
+    @media screen and (min-width: 1200px) {
+        flex-direction: row;
+        gap: 30px;
+        margin-left: 318px;
+        display: flex;
+    }
 
 
     &__item {
@@ -117,22 +147,15 @@
         display: flex;
         gap: 10px;
         color: $desk-color;
-        font-size: 14px;
+        font-size: 12px;
         font-weight: 500;
         line-height: 1.14;
         letter-spacing: 0.28px;
         transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-
-        // &:hover,
-        // &:focus, &:hover::after, &:focus::after {
-        //     opacity: 1;
-        //     outline: none;
-        //     color: $accent-color;
-        //     .roster-img{
-        //         fill: $accent-color;
-        //     }
-        // }
+        @media screen and (min-width: 1200px) {
+            font-size: 14px;
+        }
 
         &::after {
             content: '';
