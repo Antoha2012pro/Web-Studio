@@ -28,6 +28,7 @@ body {
   max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
+  outline: 1px solid red;
 }
 @media screen and (min-width: 480px) {
   .container {
@@ -134,7 +135,6 @@ body {
 .header__nav::after {
   content: "";
   position: absolute;
-  bottom: -33.7px;
   left: 0;
   width: 100%;
   height: 4px;
@@ -142,6 +142,16 @@ body {
   background: #2196F3;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   opacity: 0;
+}
+@media screen and (min-width: 768px) {
+  .header__nav::after {
+    bottom: -36.5px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .header__nav::after {
+    bottom: -33.7px;
+  }
 }
 .header__nav:hover, .header__nav:focus, .header__nav:hover::after, .header__nav:focus::after {
   outline: none;
@@ -309,42 +319,52 @@ body {
 }
 .we__items {
   display: flex;
+  flex-wrap: wrap;
   gap: 30px;
 }
-.we__item:nth-child(1):before {
-  content: "";
-  width: 270px;
-  height: 120px;
-  flex-shrink: 0;
-  display: block;
-  border-radius: 4px;
-  background-image: url(../img/antena.jpg);
+.we__item {
+  flex-basis: calc((100% - 30px) / 1);
 }
-.we__item:nth-child(2):before {
+@media screen and (min-width: 768px) {
+  .we__item {
+    flex-basis: calc((100% - 60px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .we__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
+}
+.we__item:before {
   content: "";
-  width: 270px;
+  width: 450px;
   height: 120px;
   flex-shrink: 0;
   display: block;
   border-radius: 4px;
   background-image: url(../img/timer.jpg);
+  background-position: center;
+}
+@media screen and (min-width: 768px) {
+  .we__item:before {
+    width: 354px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .we__item:before {
+    width: 270px;
+  }
+}
+.we__item:nth-child(1):before {
+  background-image: url(../img/antena.jpg);
+}
+.we__item:nth-child(2):before {
+  background-image: url(../img/timer.jpg);
 }
 .we__item:nth-child(3):before {
-  content: "";
-  width: 270px;
-  height: 120px;
-  flex-shrink: 0;
-  display: block;
-  border-radius: 4px;
   background-image: url(../img/planing.jpg);
 }
 .we__item:nth-child(4):before {
-  content: "";
-  width: 270px;
-  height: 120px;
-  flex-shrink: 0;
-  display: block;
-  border-radius: 4px;
   background-image: url(../img/kosmonaft.jpg);
 }
 .we__title {
@@ -356,12 +376,18 @@ body {
   text-transform: uppercase;
   margin-bottom: 10px;
   margin-top: 30px;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .we__title {
+    text-align: start;
+  }
 }
 .we__subtitle {
   color: #757575;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.71; /* 171.429% */
+  line-height: 1.71;
   letter-spacing: 0.42px;
 }
 
