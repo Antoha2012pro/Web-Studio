@@ -314,8 +314,14 @@ body {
 }
 
 .we {
-  padding-top: 94px;
+  padding-top: 60px;
+  padding-bottom: 60px;
   display: flex;
+}
+@media screen and (min-width: 1200px) {
+  .we {
+    padding-bottom: 0px;
+  }
 }
 .we__items {
   display: flex;
@@ -392,8 +398,14 @@ body {
 }
 
 .make {
-  padding-top: 94px;
+  padding-top: 118px;
   padding-bottom: 94px;
+  display: none;
+}
+@media screen and (min-width: 1200px) {
+  .make {
+    display: block;
+  }
 }
 .make__title {
   color: #212121;
@@ -438,22 +450,34 @@ body {
 }
 
 .team {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0px;
   background-color: #F5F4FA;
+}
+@media screen and (min-width: 1200px) {
+  .team {
+    padding: 94px 0px;
+  }
 }
 .team__title {
   color: #212121;
   text-align: center;
-  font-size: 36px;
+  font-size: 28px;
   font-weight: 700;
   line-height: 1.17;
-  letter-spacing: 1.08px;
-  margin-bottom: 50px;
+  letter-spacing: 0.84px;
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 1200px) {
+  .team__title {
+    font-size: 36px;
+    letter-spacing: 1.08px;
+    margin-bottom: 50px;
+  }
 }
 .team__items {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 .team__item {
@@ -461,10 +485,20 @@ body {
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
   background-color: #FFFFFF;
   padding-bottom: 30px;
+  flex-basis: calc((100% - 30px) / 1);
+}
+@media screen and (min-width: 768px) {
+  .team__item {
+    flex-basis: calc((100% - 30px) / 2);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .team__item {
+    flex-basis: calc((100% - 90px) / 4);
+  }
 }
 .team__img {
-  width: 270px;
-  height: 260px;
+  width: 100%;
   flex-shrink: 0;
 }
 .team__box__item {
@@ -520,8 +554,12 @@ body {
 }
 
 .clients {
-  padding-top: 94px;
-  padding-bottom: 94px;
+  padding: 60px 0px;
+}
+@media screen and (min-width: 1200px) {
+  .clients {
+    padding: 94px 0px;
+  }
 }
 .clients__title {
   color: #212121;
@@ -534,10 +572,24 @@ body {
 }
 .clients__items {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   flex-wrap: wrap;
   flex-direction: row;
+  gap: 30px;
+}
+.clients__item {
+  flex-basis: calc((100% - 30px) / 2);
+}
+@media screen and (min-width: 768px) {
+  .clients__item {
+    flex-basis: calc((100% - 60px) / 3);
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__item {
+    flex-basis: calc((100% - 150px) / 6);
+  }
 }
 .clients__link {
   display: flex;
@@ -547,10 +599,20 @@ body {
   flex-direction: row;
   border-radius: 4px;
   border: 1px solid #AFB1B8;
-  width: 170px;
-  height: 92px;
   fill: #AFB1B8;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  width: 210px;
+  height: 92px;
+}
+@media screen and (min-width: 768px) {
+  .clients__link {
+    width: 226px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .clients__link {
+    width: 170px;
+  }
 }
 .clients__link:hover, .clients__link:focus {
   outline: none;
@@ -563,16 +625,24 @@ body {
 }
 
 .footer {
-  background-color: #2F303A;
   padding-top: 60px;
   padding-bottom: 60px;
+  background-color: #2F303A;
 }
 .footer > .container {
   display: flex;
-  justify-content: baseline;
-  align-items: stretch;
   flex-wrap: wrap;
-  flex-direction: row;
+  text-align: center;
+  padding: 0px auto;
+  gap: 60px;
+}
+@media screen and (min-width: 1200px) {
+  .footer > .container {
+    text-align: start;
+  }
+}
+.footer__item {
+  flex-basis: calc((100% - 0px) / 1);
 }
 .footer__logo:focus {
   outline: none;
@@ -621,9 +691,11 @@ body {
   outline: none;
 }
 
-.networks {
-  padding-top: 12px;
-  margin-left: 70px;
+@media screen and (min-width: 1200px) {
+  .networks {
+    padding-top: 12px;
+    margin-left: 70px;
+  }
 }
 .networks__title {
   color: #FFFFFF;
@@ -636,6 +708,7 @@ body {
 }
 .networks__list {
   display: flex;
+  justify-content: center;
   gap: 10px;
 }
 .networks__link {
@@ -665,6 +738,10 @@ body {
 }
 .mailing__form {
   display: flex;
+  flex-wrap: wrap;
+}
+.mailing__form__box {
+  text-align: center;
 }
 .mailing__form__signature {
   color: #FFFFFF;
@@ -705,6 +782,7 @@ body {
   border: none;
   margin-top: 36px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  margin: 20px auto 0px auto;
 }
 .mailing__form__btn:hover, .mailing__form__btn:focus {
   outline: none;

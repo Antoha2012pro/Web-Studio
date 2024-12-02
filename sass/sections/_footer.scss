@@ -1,16 +1,26 @@
 .footer {
-    background-color: $background-color;
     padding-top: 60px;
     padding-bottom: 60px;
+    background-color: $background-color;
 
 
     & > .container {
-        // display: flex;
-        @include flexbox($justify: baseline, $align: stretch);
+        display: flex;
+        flex-wrap: wrap;
+        text-align: center;
+        padding: 0px auto;
+        gap: 60px;
+
+        @media screen and (min-width: 1200px) {
+            text-align: start;
+        }
+    }
+
+    &__item {
+        flex-basis: calc((100% - 0px) / 1);
     }
 
     &__logo {
-
         
     &:focus {
         outline: none;
@@ -70,8 +80,11 @@
 }
 
 .networks {
-    padding-top: 12px;
-    margin-left: 70px;
+
+    @media screen and (min-width: 1200px) {
+        padding-top: 12px;
+        margin-left: 70px;
+    }
 
 
     &__title {
@@ -86,6 +99,7 @@
 
     &__list {
         display: flex;
+        justify-content: center;
         gap: 10px;
     }
 
@@ -119,7 +133,12 @@
 
     &__form {
         display: flex;
+        flex-wrap: wrap;
 
+
+            &__box {
+                text-align: center;
+            }
 
             &__signature {
                 color: $title-color;
@@ -161,6 +180,7 @@
                 border: none;
                 margin-top: 36px;
                 transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+                margin: 20px auto 0px auto;
 
 
                 &:hover, &:focus {
