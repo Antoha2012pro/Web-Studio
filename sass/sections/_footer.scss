@@ -11,8 +11,35 @@
         padding: 0px auto;
         gap: 60px;
 
+        @media screen and (min-width: 768px) {
+            flex-wrap: nowrap;
+            flex-direction: column;
+        }
         @media screen and (min-width: 1200px) {
             text-align: start;
+            flex-wrap: nowrap;
+            flex-direction: row;
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+
+        @media screen and (min-width: 768px) {
+            flex-direction: row;
+            justify-content: space-between;
+            gap: 165px;
+        }
+        @media screen and (min-width: 1200px) {
+            flex-direction: row;
+            gap: 70px;
+        }
+    }
+
+    &__address__box {
+        @media screen and (min-width: 768px) {
         }
     }
 
@@ -21,7 +48,7 @@
     }
 
     &__logo {
-        
+
     &:focus {
         outline: none;
     }
@@ -49,11 +76,12 @@
         color: $title-color;
         font-size: 14px;
         font-weight: 400;
-        line-height: 1.71; /* 171.429% */
+        line-height: 1.71;
         letter-spacing: 0.42px;
-    }
+    } 
 
     &__items {
+        width: 212px;
         margin-top: 20px;
     }
 
@@ -72,11 +100,12 @@
         font-weight: 400;
         line-height: 1.71;
         letter-spacing: 0.42px;
+
+        &:focus, &__white:focus {
+            outline: none;
+        }
     }
 
-    &__link:focus, &__link__white:focus {
-        outline: none;
-    }
 }
 
 .networks {
@@ -101,6 +130,10 @@
         display: flex;
         justify-content: center;
         gap: 10px;
+
+        @media screen and (min-width: 1200px) {
+            justify-content: start;
+        }
     }
 
     &__link {
@@ -127,13 +160,22 @@
 }
 
 .mailing {
-    margin-top: 12px;
-    margin-left: 93px;
+    padding-top: 12px;
+    // margin-top: 12px;
+    // margin-left: 93px;
 
 
     &__form {
         display: flex;
+        justify-content: center;
+        flex-direction: column;
         flex-wrap: wrap;
+
+        @media screen and (min-width: 1200px) {
+            flex-direction: row;
+            justify-content: start;
+            flex-wrap: nowrap;
+        }
 
 
             &__box {
@@ -147,8 +189,12 @@
                 line-height: 1.14;
                 letter-spacing: 0.42px;
                 text-transform: uppercase;
-                margin-bottom: 20px;
+                width: 100%;
                 display: block;
+
+                @media screen and (min-width: 1200px) {
+                    text-align: start;
+                }
             }
 
             &__input {
@@ -160,6 +206,7 @@
                 box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
                 padding-left: 16px;
                 margin-right: 12px;
+                margin-top: 20px;
             }
 
             &__btn {
@@ -181,6 +228,10 @@
                 margin-top: 36px;
                 transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
                 margin: 20px auto 0px auto;
+
+                @media screen and (min-width: 768px) {
+                    margin: 36px auto 0px auto;
+                }
 
 
                 &:hover, &:focus {

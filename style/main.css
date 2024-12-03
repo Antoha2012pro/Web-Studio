@@ -636,9 +636,35 @@ body {
   padding: 0px auto;
   gap: 60px;
 }
+@media screen and (min-width: 768px) {
+  .footer > .container {
+    flex-wrap: nowrap;
+    flex-direction: column;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer > .container {
     text-align: start;
+    flex-wrap: nowrap;
+    flex-direction: row;
+  }
+}
+.footer__box {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+}
+@media screen and (min-width: 768px) {
+  .footer__box {
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 165px;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .footer__box {
+    flex-direction: row;
+    gap: 70px;
   }
 }
 .footer__item {
@@ -667,10 +693,11 @@ body {
   color: #FFFFFF;
   font-size: 14px;
   font-weight: 400;
-  line-height: 1.71; /* 171.429% */
+  line-height: 1.71;
   letter-spacing: 0.42px;
 }
 .footer__items {
+  width: 212px;
   margin-top: 20px;
 }
 .footer__item {
@@ -711,6 +738,11 @@ body {
   justify-content: center;
   gap: 10px;
 }
+@media screen and (min-width: 1200px) {
+  .networks__list {
+    justify-content: start;
+  }
+}
 .networks__link {
   display: flex;
   justify-content: center;
@@ -733,12 +765,20 @@ body {
 }
 
 .mailing {
-  margin-top: 12px;
-  margin-left: 93px;
+  padding-top: 12px;
 }
 .mailing__form {
   display: flex;
+  justify-content: center;
+  flex-direction: column;
   flex-wrap: wrap;
+}
+@media screen and (min-width: 1200px) {
+  .mailing__form {
+    flex-direction: row;
+    justify-content: start;
+    flex-wrap: nowrap;
+  }
 }
 .mailing__form__box {
   text-align: center;
@@ -750,8 +790,13 @@ body {
   line-height: 1.14;
   letter-spacing: 0.42px;
   text-transform: uppercase;
-  margin-bottom: 20px;
+  width: 100%;
   display: block;
+}
+@media screen and (min-width: 1200px) {
+  .mailing__form__signature {
+    text-align: start;
+  }
 }
 .mailing__form__input {
   width: 358px;
@@ -762,6 +807,7 @@ body {
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
   padding-left: 16px;
   margin-right: 12px;
+  margin-top: 20px;
 }
 .mailing__form__btn {
   display: flex;
@@ -783,6 +829,11 @@ body {
   margin-top: 36px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   margin: 20px auto 0px auto;
+}
+@media screen and (min-width: 768px) {
+  .mailing__form__btn {
+    margin: 36px auto 0px auto;
+  }
 }
 .mailing__form__btn:hover, .mailing__form__btn:focus {
   outline: none;
