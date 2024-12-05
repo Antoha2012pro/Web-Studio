@@ -36,16 +36,18 @@
         }
         @media screen and (min-width: 1200px) {
             flex-direction: row;
-            gap: 70px;
+            gap: 93px;
         }
     }
 
     &__address__box {
-        @media screen and (min-width: 768px) {
+        width: 231px;
+        @media screen and (min-width: 1200px) {
+            gap: 70px;
         }
     }
 
-    &__item {
+    &__item__big {
         flex-basis: calc((100% - 0px) / 1);
     }
 
@@ -85,7 +87,6 @@
     } 
 
     &__items {
-        width: 212px;
         margin-top: 20px;
     }
 
@@ -114,11 +115,10 @@
 
 .networks {
     @media screen and (min-width: 768px) {
-        padding-top: 5px;
+        margin-top: 5px;
     }
     @media screen and (min-width: 1200px) {
-        padding-top: 12px;
-        margin-left: 70px;
+        margin-top: 12px;
     }
 
 
@@ -166,9 +166,7 @@
 }
 
 .mailing {
-    padding-top: 12px;
-    // margin-top: 12px;
-    // margin-left: 93px;
+    margin-top: 12px;
 
 
     &__form {
@@ -239,8 +237,8 @@
                 transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
                 margin: 20px auto 0px auto;
 
-                @media screen and (min-width: 768px) {
-                    margin: 36px auto 0px auto;
+                @media screen and (min-width: 1200px) {
+                    margin-top: 20px;
                 }
 
 
