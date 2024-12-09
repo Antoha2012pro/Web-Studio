@@ -12,27 +12,32 @@
   </head>
   <body>
     <header class="header header__portfolio">
-      <div class="container">
-      <div class="header__navigation">
-      <a href="../index.html" class="header__logo"><span class="header__logo__web">Web</span><span class="header__logo__studio">Studio</span></a>
-      <nav class="header__list">
-          <ul class="header__items">
-              <li class="header__item"><a href="../index.html" class="header__nav">Студія</a></li>
-              <li class="header__item"><a href="./portfolio.html" class="header__nav header__nav__portfolio">Портфоліо</a></li>
-              <li class="header__item"><a href="#" class="header__nav">Контакти</a></li>
-          </ul>
-      </nav>
-      <ul class="roster">
-          <li class="roster__item"><a href="mailto:info@devstudio.com" class="roster__link"><svg class="roster__img">
-            <use href="../img/symbol-defs.svg#icon-mail"></use>
-        </svg>info@devstudio.com</a></li>  
-          <li class="roster__item"><a href="tel:+380961111111" class="roster__link"><svg class="roster__img">
-            <use href="../img/symbol-defs.svg#icon-smartphone"></use>
-        </svg><span class="roster__span">+38 096 111 11 11</span></a></li>
-      </ul>
-     </div>
-      </div>
-  </header>
+        <div class="container">
+        <div class="header__navigation">
+            <a href="../index.html" class="header__logo"><span class="header__logo__web">Web</span><span class="header__logo__studio">Studio</span></a>
+        <nav class="header__list">
+            <ul class="header__items">
+                <li class="header__item"><a href="./index.html" class="header__nav">Студія</a></li>
+                <li class="header__item"><a href="./pages/portfolio.html" class="header__nav header__nav__portfolio">Портфоліо</a></li>
+                <li class="header__item"><a href="#" class="header__nav">Контакти</a></li>
+            </ul>
+        </nav>
+        </div>
+        <button class="header__burger">
+            <svg class="header__burger__img">
+                <use href="../img/symbol-defs.svg#icon-burger"></use>
+            </svg>
+        </button>
+        <ul class="roster">
+            <li class="roster__item"><a href="mailto:info@devstudio.com" class="roster__link"><svg class="roster__img">
+                <use href="../img/symbol-defs.svg#icon-mail"></use>
+            </svg>info@devstudio.com</a></li>  
+            <li class="roster__item"><a href="tel:+380961111111" class="roster__link"><svg class="roster__img">
+                <use href="../img/symbol-defs.svg#icon-smartphone"></use>
+            </svg><span class="roster__span">+38 096 111 11 11</span></a></li>
+        </ul>
+        </div>
+    </header>
     <main>
         <!-- Секція товари -->
       <section class="goods">
@@ -159,7 +164,8 @@
     </main>
     <footer class="footer">
       <div class="container">
-      <div class="footer__address__box">
+      <div class="footer__box">
+      <div class="footer__address__box footer__item__big">
       <a href="../index.html" class="footer__logo"><span class="footer__logo__web">Web</span><span class="footer__logo__studio">Studio</span></a>
       <address class="footer__address">
       <ul class="footer__items">
@@ -167,57 +173,58 @@
           <li class="footer__item"><a href="mailto:info@devstudio.com" class="footer__link">info@devstudio.com</a></li>  
           <li class="footer__item"><a href="tel:+380961111111" class="footer__link">+38 096 111 11 11</a></li>
       </ul>
-    </address>
-  </div>
-  <div class="networks">
-  <h2 class="networks__title">приєднуйтесь</h2>
-  <ul class="networks__list">
-      <li class="networks__element">
-          <a href="https://www.instagram.com/" target="_blank" class="networks__link">
-              <svg class="networks__img">
-                  <use href="../img/symbol-defs.svg#icon-instagram"></use>
+      </address>
+      </div>
+      <div class="networks footer__item__big">
+      <h2 class="networks__title">приєднуйтесь</h2>
+      <ul class="networks__list">
+          <li class="networks__element">
+              <a href="https://www.instagram.com/" target="_blank" class="networks__link">
+                  <svg class="networks__img">
+                      <use href="../img/symbol-defs.svg#icon-instagram"></use>
+                  </svg>
+              </a>
+          </li>
+          <li class="networks__element">
+              <a href="https://x.com/" target="_blank" class="networks__link">
+                  <svg class="networks__img">
+                      <use href="../img/symbol-defs.svg#icon-twitter"></use>
+                  </svg>
+              </a>
+          </li>
+          <li class="networks__element">
+              <a href="https://www.facebook.com/" target="_blank" class="networks__link">
+                  <svg class="networks__img">
+                      <use href="../img/symbol-defs.svg#icon-facebook"></use>
+                  </svg>
+              </a>
+          </li>
+          <li class="networks__element">
+              <a href="https://www.linkedin.com/" target="_blank" class="networks__link">
+                  <svg class="networks__img">
+                      <use href="../img/symbol-defs.svg#icon-linkedin"></use>
+                  </svg>
+              </a>
+          </li>
+      </ul>
+      </div>
+      </div>
+      <div class="mailing footer__item__big">
+          <form class="mailing__form">
+              <div class="mailing__form__box">
+              <label for="mailing" class="mailing__form__signature">Підпишіться на розсилку</label>
+              <input type="email" id="mailing" class="mailing__form__input" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              title="Будь ласка, введіть коректну електронну адресу." placeholder="E-mail">
+              </div>
+              <button class="mailing__form__btn">
+                  Підписатися
+              <svg class="mailing__form__img">
+                  <use href="../img/symbol-defs.svg#icon-send"></use>
               </svg>
-          </a>
-      </li>
-      <li class="networks__element">
-          <a href="https://x.com/" target="_blank" class="networks__link">
-              <svg class="networks__img">
-                  <use href="../img/symbol-defs.svg#icon-twitter"></use>
-              </svg>
-          </a>
-      </li>
-      <li class="networks__element">
-          <a href="https://www.facebook.com/" target="_blank" class="networks__link">
-              <svg class="networks__img">
-                  <use href="../img/symbol-defs.svg#icon-facebook"></use>
-              </svg>
-          </a>
-      </li>
-      <li class="networks__element">
-          <a href="https://www.linkedin.com/" target="_blank" class="networks__link">
-              <svg class="networks__img">
-                  <use href="../img/symbol-defs.svg#icon-linkedin"></use>
-              </svg>
-          </a>
-      </li>
-  </ul>
-  </div>
-  <div class="mailing">
-      <form class="mailing__form">
-          <div class="mailing__form__box">
-          <label for="mailing" class="mailing__form__signature">Підпишіться на розсилку</label>
-          <input type="email" id="mailing" class="mailing__form__input" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
-          title="Будь ласка, введіть коректну електронну адресу." placeholder="E-mail">
-          </div>
-          <button class="mailing__form__btn">
-              Підписатися
-          <svg class="mailing__form__img">
-              <use href="../img/symbol-defs.svg#icon-send"></use>
-          </svg>
-          </button>
-      </form>
-  </div>
-  </div>
-</footer>
+              </button>
+          </form>
+      </div>
+      </div>
+  </footer>
   </body>
 </html>
