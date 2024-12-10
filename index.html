@@ -27,7 +27,7 @@
             </ul>
         </nav>
         </div>
-        <button class="header__burger">
+        <button class="header__burger" data-modal-header-open>
             <svg class="header__burger__img">
                 <use href="./img/symbol-defs.svg#icon-burger"></use>
             </svg>
@@ -40,6 +40,28 @@
                 <use href="./img/symbol-defs.svg#icon-smartphone"></use>
             </svg><span class="roster__span">+38 096 111 11 11</span></a></li>
         </ul>
+        <div class="menu is-hidden" data-header-modal>
+            <button class="menu__btn" data-modal-header-close>
+                <svg class="menu__close__img">
+                    <use href="./img/symbol-defs.svg#icon-close"></use>
+                </svg>
+            </button>
+            <ul class="menu__list">
+                <li class="menu__item"><a href="./index.html" class="menu__link">Студія</a></li>
+                <li class="menu__item"><a href="./pages/portfolio.html" class="menu__link">Портфоліо</a></li>
+                <li class="menu__item"><a href="" class="menu__link">Контакти</a></li>
+            </ul>
+            <ul class="menu__list__contact">
+                <li class="menu__item__contact"><a href="tel:+380961111111" class="menu__link__contact">+38 096 111 11 11</a></li>
+                <li class="menu__item__contact"><a href="mailto:info@devstudio.com" class="menu__link__contact">info@devstudio.com</a></li>
+            </ul>
+            <ul class="menu__list__social">
+                <li class="menu__item__social"><a href="" class="menu__link__social">Instagram</a></li>
+                <li class="menu__item__social"><a href="" class="menu__link__social">Twitter</a></li>
+                <li class="menu__item__social"><a href="" class="menu__link__social">Facebook</a></li>
+                <li class="menu__item__social"><a href="" class="menu__link__social">LinkedIn</a></li>
+            </ul>
+        </div>
         </div>
     </header>
     <main>
@@ -413,6 +435,7 @@
       </div>
     </div> -->
     <script src="./js/modal.js"></script>
+    <script src="./js/mobile_menu.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
