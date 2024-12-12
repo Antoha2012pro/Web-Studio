@@ -11,32 +11,56 @@
     <link rel="stylesheet" href="../style/main.min.css">
   </head>
   <body>
-    <header class="header header__portfolio">
-        <div class="container">
-        <div class="header__navigation">
-            <a href="../index.html" class="header__logo"><span class="header__logo__web">Web</span><span class="header__logo__studio">Studio</span></a>
-        <nav class="header__list">
-            <ul class="header__items">
-                <li class="header__item"><a href="./index.html" class="header__nav">Студія</a></li>
-                <li class="header__item"><a href="./pages/portfolio.html" class="header__nav header__nav__portfolio">Портфоліо</a></li>
-                <li class="header__item"><a href="#" class="header__nav">Контакти</a></li>
-            </ul>
-        </nav>
-        </div>
-        <button class="header__burger">
-            <svg class="header__burger__img">
-                <use href="../img/symbol-defs.svg#icon-burger"></use>
-            </svg>
-        </button>
-        <ul class="roster">
-            <li class="roster__item"><a href="mailto:info@devstudio.com" class="roster__link"><svg class="roster__img">
-                <use href="../img/symbol-defs.svg#icon-mail"></use>
-            </svg>info@devstudio.com</a></li>  
-            <li class="roster__item"><a href="tel:+380961111111" class="roster__link"><svg class="roster__img">
-                <use href="../img/symbol-defs.svg#icon-smartphone"></use>
-            </svg><span class="roster__span">+38 096 111 11 11</span></a></li>
-        </ul>
-        </div>
+    <header class="header">
+      <div class="container">
+      <div class="header__navigation">
+          <a href="./index.html" class="header__logo"><span class="header__logo__web">Web</span><span class="header__logo__studio">Studio</span></a>
+      <nav class="header__list">
+          <ul class="header__items">
+              <li class="header__item"><a href="../index.html" class="header__nav">Студія</a></li>
+              <li class="header__item"><a href="./portfolio.html" class="header__nav header__nav__portfolio">Портфоліо</a></li>
+              <li class="header__item"><a href="#" class="header__nav">Контакти</a></li>
+          </ul>
+      </nav>
+      </div>
+      <button class="header__burger" data-modal-header-open>
+          <svg class="header__burger__img">
+              <use href="../img/symbol-defs.svg#icon-burger"></use>
+          </svg>
+      </button>
+      <ul class="roster">
+          <li class="roster__item"><a href="mailto:info@devstudio.com" class="roster__link"><svg class="roster__img">
+              <use href="../img/symbol-defs.svg#icon-mail"></use>
+          </svg>info@devstudio.com</a></li>  
+          <li class="roster__item"><a href="tel:+380961111111" class="roster__link"><svg class="roster__img">
+              <use href="../img/symbol-defs.svg#icon-smartphone"></use>
+          </svg><span class="roster__span">+38 096 111 11 11</span></a></li>
+      </ul>
+      </div>
+      <div class="menu is-hidden" data-header-modal>
+          <button class="menu__btn" data-modal-header-close>
+              <svg class="menu__close__img">
+                  <use href="../img/symbol-defs.svg#icon-close"></use>
+              </svg>
+          </button>
+          <ul class="menu__list">
+              <li class="menu__item"><a href="../index.html" class="menu__link">Студія</a></li>
+              <li class="menu__item"><a href="./portfolio.html" class="menu__link">Портфоліо</a></li>
+              <li class="menu__item"><a href="" class="menu__link">Контакти</a></li>
+          </ul>
+          <div class="menu__wrapper">
+          <ul class="menu__list__contact">
+              <li class="menu__item__contact"><a href="tel:+380961111111" class="menu__link__contact">+38 096 111 11 11</a></li>
+              <li class="menu__item__contact"><a href="mailto:info@devstudio.com" class="menu__link__contact">info@devstudio.com</a></li>
+          </ul>
+          <ul class="menu__list__social">
+              <li class="menu__item__social"><a href="" class="menu__link__social">Instagram</a></li>
+              <li class="menu__item__social"><a href="" class="menu__link__social">Twitter</a></li>
+              <li class="menu__item__social"><a href="" class="menu__link__social">Facebook</a></li>
+              <li class="menu__item__social"><a href="" class="menu__link__social">LinkedIn</a></li>
+          </ul>
+          </div>
+      </div>
     </header>
     <main>
         <!-- Секція товари -->
@@ -226,5 +250,6 @@
       </div>
       </div>
   </footer>
+  <script src="../js/mobile_menu.js"></script>
   </body>
 </html>
