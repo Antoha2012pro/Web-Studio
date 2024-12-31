@@ -105,19 +105,28 @@
                 <li class="make__item" data-aos="flip-left"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="200">
-                    <img src="./img/computer.jpg" alt="Програмування" class="make__img">
+                    <picture>
+                        <source srcset="./img/desktop/desktop-tablet@1x.webp 1x, ./img/desktop/desktop-tablet@2x.webp 2x" media="(min-width: 1200px)">
+                        <img src="./img/computer.jpg" alt="Програмування" class="make__img">
+                    </picture>
                     <h2 class="make__text">Десктопні додатки</h2>
                 </li>
                 <li class="make__item" data-aos="flip-left"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="200">
-                    <img src="./img/laptop.jpg" alt="Вибирати дизайн сайту" class="make__img">
+                    <picture>
+                        <source srcset="./img/desktop/desktop-laptop@1x.webp 1x, ./img/desktop/desktop-laptop@2x.webp 2x" media="(min-width: 1200px)">
+                        <img src="./img/laptop.jpg" alt="Вибирати дизайн сайту" class="make__img">
+                    </picture>
                     <h2 class="make__text">Мобільні додатки</h2>
                 </li>
                 <li class="make__item" data-aos="flip-left"
                 data-aos-easing="ease-out-cubic"
                 data-aos-duration="200">
-                    <img src="./img/planshet.jpg" alt="Підбір кольорів на планшеті" class="make__img">
+                    <picture>
+                        <source srcset="./img/desktop/desktop-tablet-color@1x.webp 1x, ./img/desktop/desktop-tablet-color@2x.webp 2x" media="(min-width: 1200px)">
+                        <img src="./img/planshet.jpg" alt="Підбір кольорів на планшеті" class="make__img">
+                    </picture>
                     <h2 class="make__text">Дизайнерські рішення</h2>
                 </li>
             </ul>
@@ -441,7 +450,7 @@
                 </svg>
                 </div>
                 <label for="comment" class="modal__signature">Коментар</label>
-                <textarea name="" id="comment" class="modal__textarea" placeholder="Введіть текст"></textarea>
+                <textarea name="textarea" id="comment" class="modal__textarea" placeholder="Введіть текст"></textarea>
                 <label class="modal__chek__label">
                     <input type="checkbox" class="modal__chekbox" required>
                     <span class="modal__text">Погоджуюся з розсилкою та приймаю </span>
