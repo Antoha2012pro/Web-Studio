@@ -7,6 +7,27 @@
 
   refs.openModalBtn.addEventListener("click", toggleModal);
   refs.closeModalBtn.addEventListener("click", toggleModal);
+  window.addEventListener('keydown', onEscModalClose);
+  refs.modal.addEventListener('click', onBackdropClick);
+
+  function onBackdropClick() {
+    console.log(event.target);
+    console.log(event.currentTarget);
+
+    if (event.target === event.currentTarget) {
+      refs.modal.classList.toggle("is-hidden");
+    }
+    
+  }
+
+  function onEscModalClose(event) {
+    console.log(event.code);
+
+    if (event.code === 'Escape') {
+      refs.modal.classList.toggle("is-hidden");
+      window.removeEventListener('keydown', onEscModalClose);
+    }
+  }
 
   function toggleModal() {
     refs.modal.classList.toggle("is-hidden");
@@ -46,6 +67,8 @@
 //   getSpanFooter.textContent = event.target.value;
   
 // }
+
+
 
 
 
